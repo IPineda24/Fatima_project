@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>parcial2</title>
+
+<!--link how to install tailwind in js vanilla:
+https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginners-3e1b5e8fe1a1
+-->
+</head>
+<body>
+
+<section id="searchSection" class="w-full h-screen bg-red-100">
+    <form id="form" action="">
+        <input id="searchName" type="search" name="search">
+        <select id="filter" name="filter">
+            <option value="ram">Ram</option>
+            <option value="procesador">Procesador</option>
+            <option value="color">Color</option>
+            <option value="marca">Marca</option>
+        </select>
+        <input type="submit" value="Buscar">
+    </form>
+
+    <div class="show">aqui mostrara los productos </div>
+
+</section>
+        
+
+<section  id="formSection" class="w-full h-screen bg-indigo-700">
+    <div><img src="" alt="img"></div>
+    <div>
+        <form id="formProduct" action="">
+            <label for="pcBrand">Marca</label>
+            <input id="pcBrand" class="capitalize mb-8" type="text" required><br>
+                
+            <label for="pcModel">Modelo</label>
+            <input id="pcModel" class="capitalize mb-8" type="text" required><br>
+                
+            <label for="pcColor">Color</label>
+            <input id="pcColor" class="capitalize mb-8" type="text" required><br>
+
+            <label for="cpu">procesador</label>
+            <input id="cpu" class="capitalize" type="text" required>
+            <select id="cpuType" name="cpuType" class="mb-8">
+                <option value="AMD">AMD</option>
+                <option value="intel">Intel</option>
+            </select> <br>
+                
+            <label for="ram">Ram</label>
+            <select id="ram" name="ram" required class="mb-8">
+                <option value="2GB">2GB</option>
+                <option value="4GB">4GB</option>
+                <option value="8GB">8GB</option>
+                <option value="16GB">16GB</option>
+                <option value="32GB">32GB</option>
+            </select> <br>
+
+            <label for="storage">Almacenamiento</label>
+            <select id="storage" name="storage" class="mb-8">
+                <option value="128GB">128GB</option>
+                <option value="500GB">500GB</option>
+                <option value="1TB">1TB</option>
+                <option value="2TB">2TB</option>
+            </select><br>
+
+            <label for="urlImg">url de imagen</label>
+            <input type="url" id="urlImg" class="mb-8" name="url">
+            <br>
+            <input type="submit" value="add product">
+        </form>
+    </div>
+</section>
+</body>
+</html>
