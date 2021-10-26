@@ -2,7 +2,9 @@
 let computerList = [];
 let form = document.getElementById('formProduct')
 
-
+if(!(localStorage.getItem('item'))){
+    localStorage.setItem('item',JSON.stringify(computerList));
+}
 
 function showInfo(){
     var items = localStorage.getItem('item');
