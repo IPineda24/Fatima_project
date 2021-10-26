@@ -1,5 +1,3 @@
-
-
 class Computer {
     computer(marca, modelo, ram, almacenamiento, procesador,tipoProcesador, color, imagen){
         this.marca = marca;
