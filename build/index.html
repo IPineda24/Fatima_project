@@ -35,16 +35,16 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
     <div>
         <form id="formProduct" action="">
             <label for="pcBrand">Marca</label>
-            <input id="pcBrand" class="capitalize mb-8" type="text" required><br>
+            <input id="pcBrand" name="marca" class="capitalize mb-8" type="text" required><br>
                 
             <label for="pcModel">Modelo</label>
-            <input id="pcModel" class="capitalize mb-8" type="text" required><br>
+            <input id="pcModel" name="modelo"class="capitalize mb-8" type="text" required><br>
                 
             <label for="pcColor">Color</label>
-            <input id="pcColor" class="capitalize mb-8" type="text" required><br>
+            <input id="pcColor" name="color"class="capitalize mb-8" type="text" required><br>
 
             <label for="cpu">procesador</label>
-            <input id="cpu" class="capitalize" type="text" required>
+            <input id="cpu" name="procesador"class="capitalize" type="text" required>
             <select id="cpuType" name="cpuType" class="mb-8">
                 <option value="AMD">AMD</option>
                 <option value="intel">Intel</option>
@@ -60,7 +60,7 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
             </select> <br>
 
             <label for="storage">Almacenamiento</label>
-            <select id="storage" name="storage" class="mb-8">
+            <select id="storage" name="almacenamiento" class="mb-8">
                 <option value="128GB">128GB</option>
                 <option value="500GB">500GB</option>
                 <option value="1TB">1TB</option>
@@ -74,5 +74,7 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
         </form>
     </div>
 </section>
+<script src="./js/Product.js"></script>
+<script src="./js/Main.js"></script>
 </body>
 </html>
