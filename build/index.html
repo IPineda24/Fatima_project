@@ -15,7 +15,7 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
 
 <section id="searchSection" class="w-full   h-screen bg-yellow-500">
    <div class="flex justify-center pt-8 ">
-    <form id="form" action="">
+    <form id="searchForm" action="">
         <input id="searchName" type="search" name="search">
         <select id="filter" name="filter">
             <option value="ram">Ram</option>
@@ -26,7 +26,9 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
         <input type="submit" value="Buscar">
     </form>
    </div>
-
+   <div class="flex justify-center">
+       <p id="messages">Avisos</p>
+   </div>
     <div class="flex justify-center ">
         <div class="show  filter drop-shadow-lg overflow-y-auto mt-24 w-9/12 justify-center " style="height: 400px;"></div>
     </div>
@@ -88,5 +90,6 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
 </footer>
 <script src="./js/Product.js"></script>
 <script src="./js/Main.js"></script>
+<script src="./js/Busqueda.js"></script>
 </body>
 </html>

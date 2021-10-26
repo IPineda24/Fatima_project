@@ -5,10 +5,11 @@ let form = document.getElementById('formProduct')
 if(!(localStorage.getItem('item'))){
     localStorage.setItem('item',JSON.stringify(computerList));
 }
+let dataStorageInfoParsed = JSON.parse(localStorage.getItem('item'));
 
-function showInfo(){
-    var items = localStorage.getItem('item');
-    var datos = JSON.parse(items);
+function showInfo(datos){
+    //var items = localStorage.getItem('item');
+    //var datos = JSON.parse(items);
 
     let mostrar = document.querySelector(".show")
     mostrar.innerHTML = "";
@@ -41,28 +42,9 @@ form.addEventListener('submit', (e) => {
     computerList = JSON.parse(localStorage.getItem('item'));
     computerList.unshift(computer);
     localStorage.setItem('item',JSON.stringify(computerList));
-
-/*     var items = localStorage.getItem('item');
-    var datos = JSON.parse(items);
-
-    let mostrar = document.querySelector(".show")
-    mostrar.innerHTML = "";
-    let show = datos.map((item) => {
-    mostrar.innerHTML += 
-    `
-    <img src ="${item.imagen}">
-    <p class="mb-2">${item.marca}</p>
-    <p class="mb-2">${item.modelo}</p>
-    <p class="mb-2">${item.ram}</p>
-    <p class="mb-2">${item.almacenamiento}</p>
-    <p class="mb-2">${item.procesador}</p>
-    <p class="mb-2">${item.tipoProcesador}</p>
-    `
-}); */
-
-showInfo();
+    showInfo(computerList);
 })
-showInfo();
+showInfo(dataStorageInfoParsed);
 console.log(computerList)
 
 
