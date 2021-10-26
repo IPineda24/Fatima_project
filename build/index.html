@@ -13,7 +13,8 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
 </head>
 <body>
 
-<section id="searchSection" class="w-full h-screen bg-red-100">
+<section id="searchSection" class="w-full   h-screen bg-yellow-500">
+   <div class="flex justify-center pt-8 ">
     <form id="form" action="">
         <input id="searchName" type="search" name="search">
         <select id="filter" name="filter">
@@ -24,56 +25,67 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
         </select>
         <input type="submit" value="Buscar">
     </form>
+   </div>
 
-    <div class="show">aqui mostrara los productos </div>
+    <div class="flex justify-center ">
+        <div class="show  filter drop-shadow-lg overflow-y-auto mt-24 w-9/12 justify-center " style="height: 400px;"></div>
+    </div>
 
 </section>
         
 
-<section  id="formSection" class="w-full h-screen bg-indigo-700">
-    <div><img src="" alt="img"></div>
-    <div>
-        <form id="formProduct" action="">
+<section  id="formSection" class=" mt-8 sm:block  w-full md:flex justify-center items-center    h-screen ">
+    <div class="w-full pl-4 "><img class="w-full  rounded-3xl" src="img/halloween.png" alt="img"></div>
+    <div class="pl-4   w-full flex justify-center">
+        <form class="" id="formProduct" action="">
             <label for="pcBrand">Marca</label>
-            <input id="pcBrand" name="marca" class="capitalize mb-8" type="text" required><br>
+            <input id="pcBrand" name="marca" class=" border-2 border-gray-300 rounded-md capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm  " type="text" required> 
                 
             <label for="pcModel">Modelo</label>
-            <input id="pcModel" name="modelo"class="capitalize mb-8" type="text" required><br>
+            <input id="pcModel" name="modelo"class="capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
                 
             <label for="pcColor">Color</label>
-            <input id="pcColor" name="color"class="capitalize mb-8" type="text" required><br>
+            <input id="pcColor" name="color"class="capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
 
-            <label for="cpu">procesador</label>
-            <input id="cpu" name="procesador"class="capitalize" type="text" required>
-            <select id="cpuType" name="cpuType" class="mb-8">
+            <label for="cpu" class="block">Procesador</label>
+            <input id="cpu" name="procesador"class="capitalize focus:ring-indigo-500 focus:border-indigo-500   pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
+            <select id="cpuType" name="cpuType" class="mb-8 border-2 border-gray-300 rounded-md ">
                 <option value="AMD">AMD</option>
                 <option value="intel">Intel</option>
             </select> <br>
                 
             <label for="ram">Ram</label>
-            <select id="ram" name="ram" required class="mb-8">
+            <select id="ram" name="ram" required class="mb-8 mr-4 border-2 border-gray-300 rounded-md">
                 <option value="2GB">2GB</option>
                 <option value="4GB">4GB</option>
                 <option value="8GB">8GB</option>
                 <option value="16GB">16GB</option>
                 <option value="32GB">32GB</option>
-            </select> <br>
+            </select> 
 
             <label for="storage">Almacenamiento</label>
-            <select id="storage" name="almacenamiento" class="mb-8">
+            <select id="storage" name="almacenamiento" class="mb-8 border-2 border-gray-300 rounded-md">
                 <option value="128GB">128GB</option>
                 <option value="500GB">500GB</option>
                 <option value="1TB">1TB</option>
                 <option value="2TB">2TB</option>
             </select><br>
-
             <label for="urlImg">url de imagen</label>
-            <input type="url" id="urlImg" class="mb-8" name="url">
+            <input type="url" id="urlImg" class="mb-8 focus:ring-indigo-500 focus:border-indigo-500   pl-7 pr-8 sm:text-sm border-2 border-gray-300 rounded-md" name="url">
             <br>
-            <input type="submit" value="add product">
+            <input type="submit" value="Agregar" class="mt-3 w-full rounded-md border border-yellow-500 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:w-auto sm:text-sm">
         </form>
     </div>
 </section>
+
+<footer class="" style=" height: 500px; background-size: cover; background-image: url(img/footer.png);">
+    <p>integrantes</p>
+    <br> <br> <br>
+    <p>documentación</p>
+    <br> <br> <br>
+    <p>refrencias</p>
+    <br> <br> <br>
+</footer>
 <script src="./js/Product.js"></script>
 <script src="./js/Main.js"></script>
 </body>
