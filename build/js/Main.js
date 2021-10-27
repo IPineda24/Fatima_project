@@ -16,18 +16,31 @@ function showInfo(datos){
     let show = datos.map((item) => {
     mostrar.innerHTML += 
         `
-        <div class="sm:block w-full md:flex justify-center items-center mb-4 border-b-2 border-black pb-1">
-        <div class=""><img class="img-computer inline-block" src ="${item.imagen}"></div>
-        <div class="w-full">
-        <p class="mb-2 ">-Marca: ${item.marca}</p>
-        <p class="mb-2">-Modelo: ${item.modelo}</p>
-        <p class="mb-2">-Color: ${item.color}</p>
-        <p class="mb-2">-Precio: ${item.precio}</p>
-        <p class="mb-2">-Memoria Ram:${item.ram}</p>
-        <p class="mb-2">-Almacenamiento: ${item.almacenamiento}</p>
-        <p class="mb-2">-Procesador: ${item.tipoProcesador} ${item.procesador}</p>
-        </div>
-        </div>
+        <center>
+        <section class="w-full pr-4  ">
+        <div class="py-6 w-full  ">
+<div class=" md:flex sm:w-64 md:w-96 bg-white shadow-lg rounded-lg overflow-hidden">
+    <div class="w-1/3 lg:w-2/3 bg-cover"  style="background-image: url('${item.imagen}')">
+    </div> 
+    <div class="w-2/3 p-4">
+    <p class=" md:invisible  w-32 "><img class="md:h-2" src="${item.imagen}" alt="img"></p>
+    <h1 class="text-gray-900 font-bold text-2xl">${item.marca} ${item.modelo}</h1>
+    <p class="mt-2 text-gray-600 text-sm">-Color: ${item.color}</p>
+    <p class="mt-2 text-gray-600 text-sm">-Memoria Ram: ${item.ram}</p>
+    <p class="mt-2 text-gray-600 text-sm">-Almacenamiento: ${item.almacenamiento}</p>
+    <p class="mt-2 text-gray-600 text-sm">-Procesador: ${item.tipoProcesador} ${item.procesador}</p>
+    <div class="flex item-center mt-2">
+        
+    </div>
+    <div class="flex item-center justify-between mt-3">
+        <h1 class="text-gray-700 font-bold text-xl">$${item.precio}</h1>
+        <button class="ml-2 px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">comprar</button>
+    </div>
+    </div>
+</div>
+</section>
+</center>
+
         `
     });
 }

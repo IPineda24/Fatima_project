@@ -47,12 +47,12 @@ Remove the margin in all browsers.
 */
 /* width */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5pxtrasparent; 
   border-radius: 50px;
 }
  
@@ -76,6 +76,7 @@ body {
   animation: mymove 5s infinite;
 }
 
+
 #bat {animation-timing-function: linear;}
 
 @keyframes mymove {
@@ -83,7 +84,18 @@ body {
   to {left: 80%;}
 }
 
+@media only screen and (max-width: 600px) {
+  .batImg {
+    width: 100px;
+    position: relative;
+    animation: mymove 5s infinite;
+  }
 
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 75%;}
+  }
+}
 /**
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 */
@@ -6709,7 +6721,7 @@ video {
 }
 
 .w-96 {
-  width: 24rem;
+  width: 44rem;
 }
 
 .w-auto {
@@ -69243,7 +69255,7 @@ video {
   }
 
   .md\:w-96 {
-    width: 24rem;
+    width: 30rem;
   }
 
   .md\:w-auto {
