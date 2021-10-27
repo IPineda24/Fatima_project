@@ -70,6 +70,19 @@ body {
   
   margin: 0;
 }
+.batImg {
+  width: 200px;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+#bat {animation-timing-function: linear;}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 80%;}
+}
+
 
 /**
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
