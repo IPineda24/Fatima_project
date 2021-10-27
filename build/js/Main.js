@@ -17,7 +17,7 @@ function showInfo(datos){
     mostrar.innerHTML += 
         `
         <div class="sm:block w-full md:flex justify-center items-center mb-4 border-b-2 border-black pb-1">
-        <div class=""><img class="w-full inline-block" src ="${item.imagen}"></div>
+        <div class=""><img class="img-computer inline-block" src ="${item.imagen}"></div>
         <div class="w-full">
         <p class="mb-2 ">-Marca: ${item.marca}</p>
         <p class="mb-2">-Modelo: ${item.modelo}</p>

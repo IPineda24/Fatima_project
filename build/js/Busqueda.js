@@ -6,7 +6,7 @@ function searchFilter(orderBy, type){
         dataFiltered = globalData;
     }else if(type == "ram"){
         dataFiltered = globalData.filter(computer => {
-            return computer.ram.toString().toLowerCase() == orderBy.toString().toLowerCase();
+            return computer.ram.toLowerCase() == orderBy.toLowerCase();
         });
     }else if(type == "procesador"){
         dataFiltered = globalData.filter(computer => {
@@ -52,10 +52,9 @@ function searchMessage(type2){
         default:
             break;
     }
-    document.getElementById("messages").innerHTML = message;
+    document.getElementById("messages").innerHTML = message + "(Si ya no va a buscar nada, limpie la barra de búsqueda y presione 'Buscar')";
 }
-
-   
+searchMessage("ram");
 
 
 //Agregando función al formulario para que muestre la info
