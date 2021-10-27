@@ -13,9 +13,11 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
 -->
 </head>
 <body>
-    <section id="searchSection" class="w-full    bg-yellow-600">
-        <img class=" invisible md:visible absolute opacity-50 bg-black bg-opacity-50 z-0 bg-cover w-full" src="img/hh.jpg" alt="halloween banner">
-        <div class="flex justify-center pt-8 z-40">
+    <div class="w-full absolute z-40 flex justify-end pt-2 md:pr-4  "><div class="bg-white rounded-full"><img src="img/shopping-cart.png" alt="cart"></div></div>
+    <img class=" invisible md:visible absolute w-full h-full opacity-50 bg-opacity-50 z-0   " src="img/hh.jpg" alt="halloween banner">
+    <section id="searchSection" class="w-full h-full  bg-yellow-600">
+        
+        <div class="flex justify-center pt-8 ">
             <form class="z-40" id="searchForm" action="" >
                 <input id="searchName" class="md:w-96   w-40 border-2 border-gray-300 rounded-md h-8  capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500  pl-7 pr-12 sm:text-sm  " type="search" name="search" >
                 <select class="mb-8 mr-4 border-2 border-gray-300 rounded-md" id="filter"   name="filter" onclick="showMessage()" >
@@ -28,12 +30,13 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
             </form>
         </div>
         <div class="flex justify-center">
-            <p class="w-9/12 text-justify font-semibold z-40 text-white" id="messages">Avisos</p>
+            <p class="w-full mx-8 sm:text-justify lg:text-center  font-semibold z-40 text-white" id="messages">Avisos</p>
         </div>
             <div class="flex justify-center ">
                 
-                    <div class="show bg-gray-100 rounded-3xl  filter drop-shadow-lg overflow-y-auto mt-24 w-9/12 " style="height: 570px;"></div>
+                    <div class="show bg-gray-100 rounded-3xl  filter drop-shadow-lg overflow-y-auto mt-24 w-9/12 h-space" ></div>
             </div>
+            
             <img class="batImg"  id="bat" src="img/murcielago2.gif" alt="">
         </section>
         
