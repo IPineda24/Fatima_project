@@ -52,9 +52,12 @@ function searchMessage(type2){
         default:
             break;
     }
-    document.getElementById("messages").innrHTML = message;
+    document.getElementById("messages").innerHTML = message;
 }
-searchMessage("ram");
+
+   
+
+
 //Agregando función al formulario para que muestre la info
 let searchForm = document.getElementById("searchForm");
 searchForm.addEventListener('submit', (e) => {
@@ -62,3 +65,9 @@ searchForm.addEventListener('submit', (e) => {
     e.preventDefault();
     searchFilter(formSearchData.get('search'), formSearchData.get('filter'));
 });
+
+const showMessage = () => {
+    let filter = new FormData(searchForm);
+    console.log(filter.get("filter"));
+    searchMessage(filter.get("filter"));
+ }

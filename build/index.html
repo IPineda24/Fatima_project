@@ -15,13 +15,13 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
 
 <section id="searchSection" class="w-full   h-screen bg-yellow-500">
    <div class="flex justify-center pt-8 ">
-    <form id="searchForm" action="">
-        <input id="searchName" type="search" name="search">
-        <select id="filter" name="filter">
-            <option value="ram">Ram</option>
-            <option value="procesador">Procesador</option>
-            <option value="color">Color</option>
-            <option value="marca">Marca</option>
+    <form id="searchForm" action="" >
+        <input id="searchName" type="search" name="search" >
+        <select id="filter" name="filter" onclick="showMessage()" >
+            <option value="ram" name = "ram">Ram</option>
+            <option value="procesador" name = "procesador">Procesador</option>
+            <option value="color" name = "color">Color</option>
+            <option value="marca" name = "marca">Marca</option>
         </select>
         <input type="submit" value="Buscar">
     </form>
@@ -30,7 +30,7 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
        <p id="messages">Avisos</p>
    </div>
     <div class="flex justify-center ">
-        <div class="show  filter drop-shadow-lg overflow-y-auto mt-24 w-9/12 justify-center " style="height: 400px;"></div>
+        <div class="show  filter drop-shadow-lg overflow-y-auto mt-24 w-9/12 justify-center mt-1" style="height: 400px;"></div>
     </div>
 
 </section>
@@ -48,6 +48,9 @@ https://medium.com/codingthesmartway-com-blog/tailwind-css-for-absolute-beginner
                 
             <label for="pcColor">Color</label>
             <input id="pcColor" name="color"class="capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
+
+            <label for="precio">Precio</label>
+            <input id="precio" name="precio"class="capitalize mb-8 focus:ring-indigo-500 focus:border-indigo-500 block  pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
 
             <label for="cpu" class="block">Procesador</label>
             <input id="cpu" name="procesador"class="capitalize focus:ring-indigo-500 focus:border-indigo-500   pl-7 pr-12 sm:text-sm border-2 border-gray-300 rounded-md" type="text" required>
