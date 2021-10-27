@@ -19,7 +19,7 @@ function showInfo(datos){
         <center>
         <section class="w-full pr-4  ">
         <div class="py-6 w-full  ">
-<div class=" md:flex sm:w-64 md:w-96 bg-white shadow-lg rounded-lg overflow-hidden">
+    <div class=" md:flex sm:w-64 md:w-96 bg-white shadow-lg rounded-lg overflow-hidden">
     <div class="w-1/3 lg:w-2/3 bg-cover"  style="background-image: url('${item.imagen}')">
     </div> 
     <div class="w-2/3 p-4">
@@ -34,7 +34,7 @@ function showInfo(datos){
     </div>
     <div class="flex item-center justify-between mt-3">
         <h1 class="text-gray-700 font-bold text-xl">$${item.precio}</h1>
-        <button class="ml-2 px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">comprar</button>
+        <button class="ml-2 px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded btn-comprar">Comprar</button>
     </div>
     </div>
 </div>
@@ -45,6 +45,7 @@ function showInfo(datos){
     });
 }
 
+//Opteniendo los datos del input y agregando los productos al localStorage
 form.addEventListener('submit', (e) => {
     let formData = new FormData(form);
     let computer = new Computer;
@@ -59,9 +60,8 @@ form.addEventListener('submit', (e) => {
     showInfo(computerList);
 })
 showInfo(dataStorageInfoParsed);
-console.log(computerList)
 
-    
+let btnComprar = document.querySelectorAll(".btn-comprar");
 
 
 
