@@ -1,6 +1,7 @@
 
 let computerList = [];
 let carList = [];
+
 let form = document.getElementById('formProduct')
 
 if(!(localStorage.getItem('item'))){
@@ -17,19 +18,19 @@ function showInfo(datos){
     let show = datos.map((item) => {
     mostrar.innerHTML += 
         `
-        <center>
-        <section class="w-full pr-4  ">
-        <div class="py-6 w-full btnComprar" id="${item.idProducto}">
+<center>
+<section class="w-full pr-4  ">
+    <div class="py-6 w-full btnComprar" id="${item.idProducto}">
     <div class=" md:flex sm:w-64 md:w-96 bg-white shadow-lg rounded-lg overflow-hidden ">
     <div class="w-1/3 lg:w-2/3 bg-cover"  style="background-image: url('${item.imagen}')">
     </div> 
     <div class="w-2/3 p-4">
-    <p class=" md:invisible  w-32 "><img class="md:h-2" src="${item.imagen}" alt="img"></p>
-    <h1 class="text-gray-900 font-bold text-2xl">${item.marca} ${item.modelo}</h1>
-    <p class="mt-2 text-gray-600 text-sm">-Color: ${item.color}</p>
-    <p class="mt-2 text-gray-600 text-sm">-Memoria Ram: ${item.ram}</p>
-    <p class="mt-2 text-gray-600 text-sm">-Almacenamiento: ${item.almacenamiento}</p>
-    <p class="mt-2 text-gray-600 text-sm">-Procesador: ${item.tipoProcesador} ${item.procesador}</p>
+        <p class=" md:invisible  w-32 "><img class="md:h-2" src="${item.imagen}" alt="img"></p>
+        <h1 class="text-gray-900 font-bold text-2xl">${item.marca} ${item.modelo}</h1>
+        <p class="mt-2 text-gray-600 text-sm">-Color: ${item.color}</p>
+        <p class="mt-2 text-gray-600 text-sm">-Memoria Ram: ${item.ram}</p>
+        <p class="mt-2 text-gray-600 text-sm">-Almacenamiento: ${item.almacenamiento}</p>
+        <p class="mt-2 text-gray-600 text-sm">-Procesador: ${item.tipoProcesador} ${item.procesador}</p>
     <div class="flex item-center mt-2">
         
     </div>
@@ -42,8 +43,7 @@ function showInfo(datos){
 </section>
 </center>
 
-        `
-        
+        `;   
     });
 }
 
@@ -72,7 +72,6 @@ function totalPay(){
     },0);
     return total;
 }
-
 
 //funcion comprar para agregar producto al carrito de compras y mostrarlo
 function buy(){

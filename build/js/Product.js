@@ -1,3 +1,4 @@
+//Clase Computer para el catalogo de productos (Constructor)
 class Computer {
     computer(marca, modelo, color, procesador,tipoProcesador, ram, almacenamiento, imagen, precio, idProducto) {
         this.marca = marca;
