@@ -65,6 +65,16 @@ form.addEventListener('submit', (e) => {
 })
 showInfo(dataStorageInfoParsed);
 
+//funcion para calcular el total a pagar
+function totalPay(){
+    let total = carList.reduce((total,carList) =>{
+        return total + carList.precio;
+    },0);
+    return total;
+}
+
+
+//funcion comprar para agregar producto al carrito de compras y mostrarlo
 function buy(){
         let element = document.querySelector('.btnComprar').id;
         let computer = JSON.parse(localStorage.getItem('item'));
@@ -75,17 +85,28 @@ function buy(){
         });
     
         let showCar = document.querySelector('.showCar');
-        let total = carList.reduce((total,carList) =>{
-            return total + carList.precio;
-        },0);
+        let total = totalPay();
         showCar.innerHTML = `
+        <div class=" flex flex-col justify-center text-center items-center">
             <p>N° de productos: ${carList.length}</p>
             <p>Total: ${total}</p>
             <button class="ml-2 px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded " onclick="pay()"  >Confirmar Compra</button>
+        </div>
         `;       
 }
 
-
+//funcion para confirmar pago
+function pay(){
+    let showCar = document.querySelector('.showCar');
+    let total = totalPay();
+    showCar.innerHTML = `
+    <div>
+        <p>Total pagado: ${total}</p>
+        <p>Gracias por su compra</p>
+    </div>
+    `;
+    carList = [];
+}
 
        
 
