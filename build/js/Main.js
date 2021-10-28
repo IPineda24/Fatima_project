@@ -1,5 +1,6 @@
 
 let computerList = [];
+let carList = [];
 let form = document.getElementById('formProduct')
 
 if(!(localStorage.getItem('item'))){
@@ -18,8 +19,8 @@ function showInfo(datos){
         `
         <center>
         <section class="w-full pr-4  ">
-        <div class="py-6 w-full  ">
-    <div class=" md:flex sm:w-64 md:w-96 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="py-6 w-full btnComprar" id="${item.idProducto}">
+    <div class=" md:flex sm:w-64 md:w-96 bg-white shadow-lg rounded-lg overflow-hidden ">
     <div class="w-1/3 lg:w-2/3 bg-cover"  style="background-image: url('${item.imagen}')">
     </div> 
     <div class="w-2/3 p-4">
@@ -34,7 +35,7 @@ function showInfo(datos){
     </div>
     <div class="flex item-center justify-between mt-3">
         <h1 class="text-gray-700 font-bold text-xl">$${item.precio}</h1>
-        <button class="ml-2 px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded btn-comprar">Comprar</button>
+        <button class="ml-2 px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded " onclick="buy()"  >Comprar</button>
     </div>
     </div>
 </div>
@@ -42,6 +43,7 @@ function showInfo(datos){
 </center>
 
         `
+        
     });
 }
 
@@ -49,19 +51,43 @@ function showInfo(datos){
 form.addEventListener('submit', (e) => {
     let formData = new FormData(form);
     let computer = new Computer;
+    let id = parseInt(new Date().getTime());
     e.preventDefault();
     computer.computer(formData.get('marca'),formData.get('modelo'),formData.get('color')
     ,formData.get('procesador'),formData.get('cpuType'),formData.get('ram'),formData.get('almacenamiento')
-    ,formData.get('url'),formData.get('precio'));
+    ,formData.get('url'),formData.get('precio'),id);
     
     computerList = JSON.parse(localStorage.getItem('item'));
     computerList.unshift(computer);
     localStorage.setItem('item',JSON.stringify(computerList));
     showInfo(computerList);
+    
 })
 showInfo(dataStorageInfoParsed);
 
-let btnComprar = document.querySelectorAll(".btn-comprar");
+function buy(){
+        let element = document.querySelector('.btnComprar').id;
+        let computer = JSON.parse(localStorage.getItem('item'));
+        computer.forEach((item) => {
+            if(item.idProducto == element){
+                carList.push(item);
+            }
+        });
+    
+        let showCar = document.querySelector('.showCar');
+        let total = carList.reduce((total,carList) =>{
+            return total + carList.precio;
+        },0);
+        showCar.innerHTML = `
+            <p>N° de productos: ${carList.length}</p>
+            <p>Total: ${total}</p>
+            <button class="ml-2 px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded " onclick="pay()"  >Confirmar Compra</button>
+        `;       
+}
+
+
+
+       
 
 
 
