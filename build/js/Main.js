@@ -67,10 +67,13 @@ showInfo(dataStorageInfoParsed);
 
 //funcion para calcular el total a pagar
 function totalPay(){
-    let total = carList.reduce((total,carList) =>{
-        return total + carList.precio;
-    },0);
-    return total;
+    let sum = 0;
+    carList.map((item) => {
+        let precio = parseInt(item.precio);
+        sum = sum + precio;
+        }
+    );
+    return sum; 
 }
 
 //funcion comprar para agregar producto al carrito de compras y mostrarlo
@@ -86,12 +89,13 @@ function buy(){
         let showCar = document.querySelector('.showCar');
         let total = totalPay();
         showCar.innerHTML = `
-        <div class=" flex flex-col justify-center text-center items-center">
+        <div class=" flex flex-col justify-center text-center items-center bg-white rounded p-2">
             <p>N° de productos: ${carList.length}</p>
-            <p>Total: ${total}</p>
+            <p>Total: $${total}</p>
             <button class="ml-2 px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded " onclick="pay()"  >Confirmar Compra</button>
         </div>
-        `;       
+        `;     
+       
 }
 
 //funcion para confirmar pago
@@ -99,8 +103,8 @@ function pay(){
     let showCar = document.querySelector('.showCar');
     let total = totalPay();
     showCar.innerHTML = `
-    <div>
-        <p>Total pagado: ${total}</p>
+    <div class="bg-white rounded p-2 text-center">
+        <p>Total pagado: $${total}</p>
         <p>Gracias por su compra</p>
     </div>
     `;

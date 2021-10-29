@@ -39,22 +39,22 @@ function searchMessage(type2){
     let message = "";
     switch (type2) {
         case "ram":
-            message = "Escriba la cantidad de memoria seguida de 'GB', puede escribirlo con mayuscula o minúscila, ej: 5gb, 4GB";
+            message = "Escriba la cantidad de memoria seguida de 'GB', puede escribirlo con mayuscula o minúscila, ej: 5gb, 4GB.";
             break;
         case "procesador":
-            message = "Escriba el tipo de procesador, ej: Intel, AMD";
+            message = "Escriba el tipo de procesador, ej: Intel, AMD.";
             break;
         case "marca":
-            message = "Escriba la marca de la computadora, ej: HP, Dell";
+            message = "Escriba la marca de la computadora, ej: HP, Dell.";
             break;
         case "color":
-            message = "Escriba el color de la computadora de la siguiente manera, rojo, verde, amarillo, etc";
+            message = "Escriba el color de la computadora de la siguiente manera, rojo, verde, amarillo, etc.";
         default:
             break;
     }
-    document.getElementById("messages").innerHTML = message + "(Si ya no va a buscar nada, limpie la barra de búsqueda y presione 'Buscar')";
+    document.getElementById("messages").innerHTML = message + " (Si ya no va a buscar nada, limpie la barra de búsqueda y presione 'Buscar')";
 }
-searchMessage("ram");
+searchMessage();
 
 
 //Agregando función al formulario para que muestre la info
@@ -65,6 +65,7 @@ searchForm.addEventListener('submit', (e) => {
     searchFilter(formSearchData.get('search'), formSearchData.get('filter'));
 });
 
+//Mostrando mensaje de sugerencias
 const showMessage = () => {
     let filter = new FormData(searchForm);
     console.log(filter.get("filter"));
