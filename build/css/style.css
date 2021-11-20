@@ -70,32 +70,7 @@ body {
   
   margin: 0;
 }
-.batImg {
-  width: 200px;
-  position: relative;
-  animation: mymove 5s infinite;
-}
 
-
-#bat {animation-timing-function: linear;}
-
-@keyframes mymove {
-  from {left: 0px;}
-  to {left: 80%;}
-}
-
-@media only screen and (max-width: 600px) {
-  .batImg {
-    width: 100px;
-    position: relative;
-    animation: mymove 5s infinite;
-  }
-
-  @keyframes mymove {
-    from {left: 0px;}
-    to {left: 75%;}
-  }
-}
 /**
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 */

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/customStyle.css">
+    <title>iniciar sesion</title>
+</head>
+<header>
+    <nav class="bg-celeste shadow-lg rounded-b-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center py-4">
+                            <img src="img/Logo-ComparT.png" alt="Logo" class="w-32 mr-2">
+                            <span class="font-semibold text-gray-500 text-lg"></span>
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-white border-b-4 border-white font-semibold ">Inicio</a>
+                        <a href="abaut.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300">¿Que es comparte?</a>
+                        <a href="services.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300">Nuestros servicios</a>
+                      
+                    </div>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-3 ">
+                    <a href="login.html" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-teal-300 hover:text-white transition duration-300">Log In</a>
+                    <a href="register.html" class="py-2 px-2 font-medium text-white bg-amarillo rounded hover:bg-teal-300 transition duration-300">Sign Up</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-teal-300 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-whitefont-semibold">Inicio</a></li>
+                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-white transition duration-300">¿Que es comparte?</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-white transition duration-300">Nuestros servicios</a></li>
+               
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+    </nav>
+</header>
+<body>
+        <div class="w-full h-screen flex justify-center items-center ">
+            <div class="bg-grey-lighter min-h-screen flex flex-col">
+                <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+                    <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+                        <h1 class="mb-8 text-3xl text-center">Sign up</h1>
+                        <input 
+                            type="text"
+                            class="block border border-grey-light w-full p-3 rounded mb-4"
+                            name="fullname"
+                            placeholder="Full Name" />
+    
+                        <input 
+                            type="text"
+                            class="block border border-grey-light w-full p-3 rounded mb-4"
+                            name="email"
+                            placeholder="Email" />
+    
+                        <input 
+                            type="password"
+                            class="block border border-grey-light w-full p-3 rounded mb-4"
+                            name="password"
+                            placeholder="Password" />
+                        <input 
+                            type="password"
+                            class="block border border-grey-light w-full p-3 rounded mb-4"
+                            name="confirm_password"
+                            placeholder="Confirm Password" />
+    
+                            <a href="dashboard.html"><button
+                            type="submit"
+                            class="w-full text-center py-3 rounded bg-green text-green-500 hover:bg-green-dark focus:outline-none my-1"
+                        >Create Account</button></a>
+    
+                        <div class="text-center text-sm text-grey-dark mt-4">
+                            By signing up, you agree to the 
+                            <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                                Terms of Service
+                            </a> and 
+                            <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                                Privacy Policy
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="text-grey-dark mt-6">
+                        Already have an account? 
+                        <a class="no-underline border-b border-blue text-blue" href="login.html">
+                            Log in
+                        </a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/customStyle.css">
+    <title>ComparT</title>
+
+</head>
+<header>
+    <nav class="bg-celeste shadow-lg rounded-b-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center py-4">
+                            <img src="img/Logo-ComparT.png" alt="Logo" class="w-32 mr-2">
+                            <span class="font-semibold text-gray-500 text-lg"></span>
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-gray-500   font-semibold ">Inicio</a>
+                        <a href="abaut.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-white transition duration-300">¿Que es comparte?</a>
+                        <a href="services.html" class="py-4 px-2 text-white  border-b-4 border-white font-semibold hover:text-white transition duration-300">Nuestros servicios</a>
+                      
+                    </div>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-3 ">
+                    <a href="login.html" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-teal-300 hover:text-white transition duration-300">Log In</a>
+                    <a href="register.html" class="py-2 px-2 font-medium text-white bg-amarillo rounded hover:bg-teal-300 transition duration-300">Sign Up</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-teal-300 "
+                        x-show="!showMenu"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-whitefont-semibold">Inicio</a></li>
+                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-white transition duration-300">¿Que es comparte?</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-white transition duration-300">Nuestros servicios</a></li>
+               
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+    </nav>
+</header>
+<body class="bg-amarillo">
+
+        <div class="flex justify-center items-center mt-16 px-8">
+        
+            <div class="w-full px-8">
+                <img class="w-full" src="img/img1.JPG" alt="">
+            </div>
+
+            <div class="w-full">
+                <h1 class="text-4xl text-white mb-8 ">¿Como compartir a traves de ComparT?</h1>
+                <ul class="text-3xl text-white  text-azul">
+                <li class="mb-4">1-Regístrate en la App</li> 
+                <li class="mb-4">2-Ve a la sección de usuario</li> 
+                <li class="mb-4">3-Identifica la seccion de Noticias y haz Click</li> 
+                <li class="mb-4">4-Agrega fotogradias y una descripción de lo que quieres compartir</li> 
+                <li class="mb-4">5-Elige con quien compartir</li> 
+                <li class="mb-4">6-Elige uno de nuestros productos de entrega</li> 
+                
+                </ul>
+            </div>
+        </div>
+
+        <br>
+            <div class="flex justify-center items-center mt-16 px-8">
+                <div class="w-full">
+                    <h1 class="text-4xl text-white mb-8 ">¿Como solicitar?</h1>
+                    <ul class="text-3xl text-white  text-azul">
+                    <li class="mb-4">1-Accede a la sección de noticias</li> 
+                    <li class="mb-4">2-selecciona el artículo,ropa, alimento que necesites</li> 
+                    <li class="mb-4">3-comunicate vía mensajes como la persona responsable de la publicación</li> 
+                    <li class="mb-4">4-solicita con amabilidad y responsabilidad el articulo, ropa,alimento</li> 
+                    <li class="mb-4">5-Acuerda el día, hora y fecha de la entreg  y seleccionauno de nuestros puntos de entrega</li> 
+            
+                    
+                    </ul>
+                </div>
+                <div class="w-full px-8">
+                    <img class="w-full" src="img/img1.JPG" alt="">
+                </div>
+        
+            </div>
+                
+            <div class="w-full flex justify-between items-center px-8">
+                <div class="w-full px-4">
+                    <h1 class="full text-4xl text-white mb-8 ">Puntos de entrega</h1>
+                    <hr>
+                    <br>
+                    <iframe class="rounded w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22183.99807812763!2d-89.23128866887642!3d13.683870696926462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331cd305c735b%3A0x3d2a75b3761d4ded!2sUniversidad%20Centroamericana%20Jos%C3%A9%20Sime%C3%B3n%20Ca%C3%B1as!5e0!3m2!1ses!2ssv!4v1637383807959!5m2!1ses!2ssv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="w-7/12">
+                    <ul class="text-3xl text-white pt-20 px-8 text-azul">
+                        <li class="mb-4">Punto de entrega A</li> 
+                        <li class="mb-4">Punto de entrega A</li> 
+                        <li class="mb-4">Punto de entrega A</li> 
+                        <li class="mb-4">Punto de entrega A</li> 
+                        <li class="mb-4">Punto de entrega A</li> 
+                        <li class="mb-4">Punto de entrega A</li> 
+                        
+                
+                        
+                        </ul>
+                </div>
+            </div>
+
+
+            <div class="bg-azul">
+            <h1 class="full text-4xl text-white mb-8 mt-8 text-center ">Registro de entrega</h1>
+            <div class="w-full flex justify-center">
+                <form class="w-full max-w-lg">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                        First Name
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+                        <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+                        Last Name
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+                    </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                        Password
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
+                        <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+                    </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-2">
+                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                        City
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
+                    </div>
+                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+                        State
+                        </label>
+                        <div class="relative">
+                        <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                            <option>New Mexico</option>
+                            <option>Missouri</option>
+                            <option>Texas</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                        Zip
+                        </label>
+                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
+                    </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+                    
+        </body>
+</html>
